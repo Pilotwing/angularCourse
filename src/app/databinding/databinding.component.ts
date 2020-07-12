@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./databinding.component.css']
 })
 export class DatabindingComponent implements OnInit {
-
+  allowReset = false;
+  userName = ''
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onResetUserName() {
+    this.userName = '';
   }
 
 }

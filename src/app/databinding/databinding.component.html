@@ -1,2 +1,5 @@
 <h3>databinding works!</h3>
 <hr>
+<input type="text" class="form-control" [(ngModel)]="userName">
+<p>{{userName}}</p>
+<button class="btn btn-primary" (click)="onResetUserName()">Reset</button>
