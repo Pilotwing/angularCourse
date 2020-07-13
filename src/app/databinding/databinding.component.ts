@@ -13,13 +13,8 @@ export class DatabindingComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onUpdateUserName(event: any) {
+  onUpdateUserName() {
     this.allowReset = (this.userName != '') ? true : false;
-  }
-
-  onClickResetUserName() {
-    this.userName = '';
-    this.allowReset = false;
   }
 
 }
