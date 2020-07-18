@@ -6,10 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./directives.component.css']
 })
 export class DirectivesComponent implements OnInit {
-
+  displayed = true;
+  clickLogs = [];
+  countClick = 0;
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onClick () {
+    this.displayed = !this.displayed;
+    this.clickLogs.push(this.countClick++ + " " + new Date().getTime());
+  }
+
+  getColor() {
+    return this.countClick >= 5 ? "blue" : "white";
+  }
 }

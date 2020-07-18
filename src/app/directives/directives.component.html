@@ -1,1 +1,10 @@
 <p>directives works!</p>
+<button class="btn btn-primary" (click)="onClick()" >Display Details</button>
+<p *ngIf="displayed">Secret content</p>
+<ul>
+    <li [ngStyle]="{backgroundColor:getColor()}" [ngClass]="{log: countClick >= 5}" *ngFor="let log of clickLogs">Click {{log}}</li>
+    <p *ngIf="serverCreated; else newColor">Server was created, server name is {{serverName}}</p>
+    <ng-template #newColor>
+        <p>No server was created!</p>
+    </ng-template>
+</ul>
