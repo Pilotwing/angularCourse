@@ -18,8 +18,4 @@ export class DirectivesComponent implements OnInit {
     this.displayed = !this.displayed;
     this.clickLogs.push(this.countClick++ + " " + new Date().getTime());
   }
-
-  getColor() {
-    return this.countClick >= 5 ? "blue" : "white";
-  }
 }
