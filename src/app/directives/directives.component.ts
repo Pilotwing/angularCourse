@@ -20,6 +20,6 @@ export class DirectivesComponent implements OnInit {
 
   onClick () {
     this.displayed = !this.displayed;
-    this.clickLogs.push(this.countClick++ + " " + new Date().getTime());
+    this.clickLogs.push(this.countClick++ + " " + new Date());
   }
 }
